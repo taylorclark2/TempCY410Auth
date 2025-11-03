@@ -1,7 +1,8 @@
 import unittest
 import os
 import json
-from auth import create_user, login_user, hash_password, USERS_FILE
+from auth import create_user, login_user, hash_password, USERS_FILE, main
+from unittest.mock import patch
 
 class TestAuth(unittest.TestCase):
 
@@ -53,6 +54,30 @@ class TestAuth(unittest.TestCase):
         hashed_password2, salt2 = hash_password(password)
         self.assertNotEqual(hashed_password1, hashed_password2)
         self.assertNotEqual(salt1, salt2)
+
+    @patch('builtins.input', side_effect=['1', 'newuser', 'New User', 'password123', '3'])
+    @patch('builtins.print')
+    def test_main_create_user(self, mock_print, mock_input):
+        main()
+        mock_print.assert_any_call("User newuser created successfully.")
+
+    @patch('builtins.input', side_effect=['2', 'testuser', 'password', '3'])
+    @patch('builtins.print')
+    def test_main_login(self, mock_print, mock_input):
+        main()
+        mock_print.assert_any_call("Welcome, Test User!")
+
+    @patch('builtins.input', side_effect=['3'])
+    @patch('builtins.print')
+    def test_main_exit(self, mock_print, mock_input):
+        main()
+        mock_print.assert_any_call("Exiting...")
+
+    @patch('builtins.input', side_effect=['4', '3'])
+    @patch('builtins.print')
+    def test_main_invalid_choice(self, mock_print, mock_input):
+        main()
+        mock_print.assert_any_call("Invalid choice. Please try again.")
 
 if __name__ == '__main__':
     unittest.main()
