@@ -5,6 +5,7 @@
 This project is a web-based authentication module developed in Python for the CY-410 lab. It features:
 *   A Flask backend server.
 *   A simple frontend with HTML, CSS, and JavaScript.
+*   A main landing page with links to login and registration.
 *   User database stored in `users.json` as a text file with JSON objects.
 *   Cryptographically safe functions for random number generation and hashing.
 *   Passwords are salted and hashed using SHA256.
@@ -19,7 +20,7 @@ To run the application, you need to have Flask installed (`pip3 install Flask`).
 
 *   **Run:** `python3 app.py`
 
-Once the server is running, you can access the application by opening a web browser and navigating to `http://127.0.0.1:5000`.
+Once the server is running, you can access the application by opening a web browser and navigating to `http://127.0.0.1:5000`. The login page is at `http://127.0.0.1:5000/login`.
 
 ## Development Conventions
 
