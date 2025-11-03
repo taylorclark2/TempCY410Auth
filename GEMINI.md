@@ -16,7 +16,7 @@ To run the authentication module, navigate to the project's root directory in yo
 
 ### Commands:
 
-*   **Run:** `python auth.py`
+*   **Run:** `python3 auth.py`
 
 Once running, you will be presented with a menu to either create a new user or log in.
 
@@ -25,3 +25,17 @@ Once running, you will be presented with a menu to either create a new user or l
 *   **Language:** Python 3
 *   **Password Hashing:** Passwords are salted using `secrets.token_hex(16)` and hashed using `hashlib.sha256`.
 *   **User Data Storage:** User data is stored in `users.json` in a JSON array format, with each user as a JSON object.
+
+## Testing
+
+Unit tests are located in `test_auth.py` and can be run using the following command:
+
+*   **Test:** `python3 -m unittest test_auth.py`
+
+The tests cover the following functionality:
+*   Successful user creation.
+*   Prevention of duplicate usernames.
+*   Successful user login.
+*   Handling of incorrect passwords.
+*   Handling of non-existent users.
+*   Correctness of password hashing and salting.
