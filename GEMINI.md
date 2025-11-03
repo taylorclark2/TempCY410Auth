@@ -2,27 +2,29 @@
 
 ## Project Overview
 
-This project is an authentication module developed in Python for the CY-410 lab. It features:
+This project is a web-based authentication module developed in Python for the CY-410 lab. It features:
+*   A Flask backend server.
+*   A simple frontend with HTML, CSS, and JavaScript.
 *   User database stored in `users.json` as a text file with JSON objects.
 *   Cryptographically safe functions for random number generation and hashing.
 *   Passwords are salted and hashed using SHA256.
-*   A command-line interface (CLI) for user interaction.
-*   CLI options for "login" and "create user".
-*   User attributes include: username, name, and password. Authentication is performed via password verification.
+*   API endpoints for user registration and login.
+*   A web interface for user interaction.
 
 ## Building and Running
 
-To run the authentication module, navigate to the project's root directory in your terminal and execute the `auth.py` script.
+To run the application, you need to have Flask installed (`pip3 install Flask`). Then, navigate to the project's root directory in your terminal and execute the `app.py` script.
 
 ### Commands:
 
-*   **Run:** `python3 auth.py`
+*   **Run:** `python3 app.py`
 
-Once running, you will be presented with a menu to either create a new user or log in.
+Once the server is running, you can access the application by opening a web browser and navigating to `http://127.0.0.1:5000`.
 
 ## Development Conventions
 
-*   **Language:** Python 3
+*   **Backend:** Python 3 with Flask
+*   **Frontend:** HTML, CSS, JavaScript
 *   **Password Hashing:** Passwords are salted using `secrets.token_hex(16)` and hashed using `hashlib.sha256`.
 *   **User Data Storage:** User data is stored in `users.json` in a JSON array format, with each user as a JSON object.
 
@@ -39,3 +41,4 @@ The tests cover the following functionality:
 *   Handling of incorrect passwords.
 *   Handling of non-existent users.
 *   Correctness of password hashing and salting.
+*   CLI interaction of the `main` function in `auth.py`.
