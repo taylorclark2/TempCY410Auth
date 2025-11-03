@@ -27,6 +27,7 @@ Once the server is running, you can access the application by opening a web brow
 *   **Frontend:** HTML, CSS, JavaScript
 *   **Password Hashing:** Passwords are salted using `secrets.token_hex(16)` and hashed using `hashlib.sha256`.
 *   **User Data Storage:** User data is stored in `users.json` in a JSON array format, with each user as a JSON object.
+*   **UI:** Includes a fade-in animation for page transitions.
 
 ## Testing
 
