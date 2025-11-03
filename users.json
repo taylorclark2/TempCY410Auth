@@ -1,1 +1,20 @@
-[]
+[
+    {
+        "username": "igor",
+        "name": "igor kh",
+        "password": "c6f2e1ead2fc6a07e044480111d4486b1506ede2ce768fdb6ef151fb94dfc612",
+        "salt": "3846e15d33f4f70fb6985d8c7cd4c053"
+    },
+    {
+        "username": "taylor",
+        "name": "taylor c",
+        "password": "5288af37ffb99192b8afc85deb621c28407fc0e7e4024efcbf79148781db0837",
+        "salt": "6e63c0ebc55016ad17a2c4132424039b"
+    },
+    {
+        "username": "taylor2",
+        "name": "taylor c",
+        "password": "76629a7cd58c14d4ebdc8ad43d41e9ade38902ce75ec0ad764d3db37bdb3aac6",
+        "salt": "0f3dc31d91c37c505edb6f72dce15f32"
+    }
+]

@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             if (response.ok) {
-                window.location.href = '/';
+                window.location.href = '/login';
             } else {
                 alert('Username already exists');
             }
